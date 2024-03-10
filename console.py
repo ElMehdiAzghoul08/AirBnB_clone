@@ -17,7 +17,7 @@ class HBNBCommand(cmd.Cmd):
         """Quit command to exit the program"""
         return True
     
-    """ Method to create a new instance of BaseModel and save it to JSON file and print the id******************"""
+    " Method to create a new instance of BaseModel and save it to JSON file and print the id**********************************************"
     def do_create(self, line):
         #split command line
         args = shlex.split(line)
@@ -35,7 +35,7 @@ class HBNBCommand(cmd.Cmd):
         new_instance.save()
         print(new_instance.id)
 
-    """Method to print the string representation*****************************************************************"""
+    "Method to print the string representation*******************************************************************************************"
     def do_show(self, line):
         args = shlex.split(line)
         FileStorage().reload() #reload data from the json file
@@ -70,7 +70,7 @@ class HBNBCommand(cmd.Cmd):
             print("** no instance found **")
     
 
-    """Method to: Deletes an instance based on the class name and id*******************************************"""
+    "Method to: Deletes an instance based on the class name and id*****************************************************************"
     def do_destroy(self, line):
         args = shlex.split(line)
         FileStorage().reload() #reload data from the jsob file
@@ -107,7 +107,7 @@ class HBNBCommand(cmd.Cmd):
 
 
 
-    """Method to: Prints all string representation of all instances based or not on the class name***************"""
+    "Method to: Prints all string representation of all instances based or not on the class name****************************************"
     def do_all(self, line):
         args = shlex.split(line)
         FileStorage().reload() #Reload data from the JSON file
@@ -130,7 +130,7 @@ class HBNBCommand(cmd.Cmd):
         print(result)
 
 
-    """Method to : Updates an instance based on the class name and id by adding or updating attribute************"""
+    "Method to : Updates an instance based on the class name and id by adding or updating attribute**************************************"
     def do_update(self, line):
         #The do_update method parses the input line into arguments using shlex.split()
         args = shlex.split(line)

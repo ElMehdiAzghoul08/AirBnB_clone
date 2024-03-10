@@ -1,12 +1,13 @@
 import json
 from models.base_model import BaseModel
+from models.user import User
 
 class FileStorage:
     #path to JSON file
     __file_path = "file.json"
     #a dictionary to store objects
     __objects = {}
-    classes = {} #add attribute to store registered classes
+    classes = { 'BaseModel': BaseModel, 'User': User } #add attribute to store registered classes
 
     def all(self):
         #return the dictionary of all objects
@@ -21,7 +22,7 @@ class FileStorage:
         #serialize __object to JSON and save it to the file
         obj_dict = {key: obj.to_dict() for key, obj in self.__objects.items()}
         with open(self.__file_path, 'w') as file:
-            json.dump(obj_dict, file)
+            json.dump(obj_dict, file, indent=4)
 
     def reload(self):
         #Deserialize JSON from the file and update __objects
