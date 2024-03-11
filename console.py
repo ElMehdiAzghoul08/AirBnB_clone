@@ -1,3 +1,4 @@
+"""console Module"""
 import cmd
 import shlex
 import json
