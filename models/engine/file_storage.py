@@ -1,13 +1,25 @@
 import json
 from models.base_model import BaseModel
 from models.user import User
+from models.place import Place
+from models.city import City
+from models.state import State
+from models.amenity import Amenity
+from models.review import Review
 
 class FileStorage:
     #path to JSON file
     __file_path = "file.json"
     #a dictionary to store objects
     __objects = {}
-    classes = { 'BaseModel': BaseModel, 'User': User } #add attribute to store registered classes
+    classes = { 
+        'BaseModel': BaseModel,
+        'User': User,
+        'State': State,
+        'City': City,
+        'Amenity': Amenity,
+        'Review': Review
+    } #add attribute to store registered classes
 
     def all(self):
         #return the dictionary of all objects

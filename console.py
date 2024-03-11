@@ -4,6 +4,11 @@ import json
 from models.base_model import BaseModel
 from models.engine.file_storage import FileStorage
 from models.user import User
+from models.place import Place
+from models.state import State
+from models.amenity import Amenity
+from models.review import Review
+from models.city import City
 
 
 class HBNBCommand(cmd.Cmd):
@@ -27,15 +32,12 @@ class HBNBCommand(cmd.Cmd):
             print("** class name is missing **")
             return
         class_name = args[0]
-        if class_name not in ["BaseModel", "User"]:
+        if class_name not in ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]:
             print("** class doesn't exist **")
             return
         #if the class name is provided create new instance
         #and save it and print the id
-        if class_name == "BaseModel":
-            new_instance = BaseModel()
-        elif class_name == "User":
-            new_instance = User()
+        new_instance = eval(class_name)()
         new_instance.save()
         print(new_instance.id)
 
@@ -50,7 +52,7 @@ class HBNBCommand(cmd.Cmd):
 
         # Check if there are any instances of the given class
         #checking if the class exists
-        if class_name not in ["BaseModel", "User"]:
+        if class_name not in ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]:
             print("** class doesn't exist **")
             return
             
@@ -85,7 +87,7 @@ class HBNBCommand(cmd.Cmd):
         class_name = args[0] #class name is first argument
 
         #checking if the class exist
-        if class_name not in ["BaseModel", "User"]:
+        if class_name not in ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]:
             print("** class doesn't exist **")
             return
         
@@ -126,7 +128,7 @@ class HBNBCommand(cmd.Cmd):
         class_name = args[0] #class name is the first argument
 
     #check if the class exists
-        if class_name not in ["BaseModel", "User"]:
+        if class_name not in ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]:
             print("** class doesn't exist **")
             return
     #Filter instances based on class name
@@ -149,7 +151,7 @@ class HBNBCommand(cmd.Cmd):
         class_name = args[0] #Get the class name from the arguments
 
         #Check if the class doesn't exit
-        if class_name not in ["BaseModel", "User"]:
+        if class_name not in ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]:
             print("** class doesn't exist **")
             return
         
