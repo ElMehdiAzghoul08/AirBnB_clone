@@ -1,3 +1,4 @@
+"""module doc"""
 import cmd
 import uuid
 from datetime import datetime
