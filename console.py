@@ -23,16 +23,19 @@ class HBNBCommand(cmd.Cmd):
         #split command line
         args = shlex.split(line)
         #check if the class name is provided
-        if len(args) == 0:
+        if not args:
             print("** class name is missing **")
             return
         class_name = args[0]
-        if class_name != "BaseModel":
+        if class_name not in ["BaseModel", "User"]:
             print("** class doesn't exist **")
             return
         #if the class name is provided create new instance
         #and save it and print the id
-        new_instance = BaseModel()
+        if class_name == "BaseModel":
+            new_instance = BaseModel()
+        elif class_name == "User":
+            new_instance = User()
         new_instance.save()
         print(new_instance.id)
 
@@ -47,7 +50,7 @@ class HBNBCommand(cmd.Cmd):
 
         # Check if there are any instances of the given class
         #checking if the class exists
-        if class_name not in FileStorage().classes.keys():
+        if class_name not in ["BaseModel", "User"]:
             print("** class doesn't exist **")
             return
             
@@ -59,6 +62,7 @@ class HBNBCommand(cmd.Cmd):
         obj_id = args[1] #the object id is in the second argument
         
         #Forming the key to search for the object in the dictionary
+        objects = FileStorage().all()
         key = f"{class_name}.{obj_id}"
     
         #getting dictionary of all objects
@@ -81,7 +85,7 @@ class HBNBCommand(cmd.Cmd):
         class_name = args[0] #class name is first argument
 
         #checking if the class exist
-        if class_name not in FileStorage().classes.keys():
+        if class_name not in ["BaseModel", "User"]:
             print("** class doesn't exist **")
             return
         
@@ -122,7 +126,7 @@ class HBNBCommand(cmd.Cmd):
         class_name = args[0] #class name is the first argument
 
     #check if the class exists
-        if class_name not in FileStorage().classes.keys():
+        if class_name not in ["BaseModel", "User"]:
             print("** class doesn't exist **")
             return
     #Filter instances based on class name
@@ -145,7 +149,7 @@ class HBNBCommand(cmd.Cmd):
         class_name = args[0] #Get the class name from the arguments
 
         #Check if the class doesn't exit
-        if class_name not in FileStorage().classes.keys():
+        if class_name not in ["BaseModel", "User"]:
             print("** class doesn't exist **")
             return
         
