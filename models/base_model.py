@@ -35,7 +35,7 @@ class BaseModel:
         from models.engine.file_storage import FileStorage
         # update updated_at and save to storage
         self.updated_at = datetime.now()
-        FileStorage().save()
+        FileStorage().save(self)  # saving the object to the storage
 
     def to_dict(self):
         # creating a dictionary that contains all key/values of the instances
