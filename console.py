@@ -25,6 +25,10 @@ class HBNBCommand(cmd.Cmd):
         """Quit command to exit the program"""
         return True
 
+    def emptyline(self, line):
+        """skip empty line"""
+        pass
+
     " Method create a new instance of BaseModel and save it to JSON file"
     "and print id"
     def do_create(self, line):
