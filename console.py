@@ -32,7 +32,7 @@ class HBNBCommand(cmd.Cmd):
         args = shlex.split(line)
         # check if the class name is provided
         if not args:
-            print("** class name is missing **")
+            print("** class name missing **")
             return
         name_of_class_ = args[0]
         if name_of_class_ not in ["BaseModel", "User", "Place",
@@ -63,7 +63,7 @@ class HBNBCommand(cmd.Cmd):
 
         # checking if the id is missing
         if len(args) < 2:
-            print("** instance id is missing **")
+            print("** instance id missing **")
             return
 
         obj_id = args[1]  # the object id is in the second argument
@@ -97,7 +97,7 @@ class HBNBCommand(cmd.Cmd):
 
         # checking if the id is missig
         if len(args) < 2:
-            print("** instance id is missing **")
+            print("** instance id missing **")
             return
 
         obj_id = args[1]  # the object id is the second argument

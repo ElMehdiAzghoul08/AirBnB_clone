@@ -46,3 +46,4 @@ class BaseModel:
         dictionary_instances_['created_at'] = self.created_at.isoformat()
         dictionary_instances_['updated_at'] = self.updated_at.isoformat()
         return dictionary_instances_
+    test_name = ""
