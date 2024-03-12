@@ -752,5 +752,14 @@
         "updated_at": "2024-03-10T23:01:40.450137",
         "first_name": "",
         "__class__": "User"
+    },
+    "BaseModel.ab671127-6a3b-463b-9014-cc16389f2451": {
+        "id": "ab671127-6a3b-463b-9014-cc16389f2451",
+        "created_at": "2024-03-12T16:30:57.056598",
+        "updated_at": "2024-03-12T16:30:57.056669",
+        "first_name": "",
+        "name": "My First Model",
+        "my_number": 89,
+        "__class__": "BaseModel"
     }
 }
