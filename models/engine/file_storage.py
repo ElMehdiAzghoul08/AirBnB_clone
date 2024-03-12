@@ -32,7 +32,7 @@ class FileStorage:
         key = "{}.{}".format(obj.__class__.__name__, obj.id)
         self.__objects[key] = obj
 
-    def save(self, obj):
+    def save(self):
         # serialize __object to JSON and save it to the file
         object_dictionary_ = {key: obj.
                               to_dict() for key, obj in self.__objects.items()}

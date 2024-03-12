@@ -779,5 +779,23 @@
         "name": "My First Model",
         "my_number": 89,
         "__class__": "BaseModel"
+    },
+    "BaseModel.cfc9b0b6-14f1-49bc-aed6-427c88f911e1": {
+        "id": "cfc9b0b6-14f1-49bc-aed6-427c88f911e1",
+        "created_at": "2024-03-12T17:29:02.147188",
+        "updated_at": "2024-03-12T17:29:02.147369",
+        "first_name": "",
+        "name": "My First Model",
+        "my_number": 89,
+        "__class__": "BaseModel"
+    },
+    "BaseModel.27d33f7b-1831-41bd-b27a-a84c55af890e": {
+        "id": "27d33f7b-1831-41bd-b27a-a84c55af890e",
+        "created_at": "2024-03-12T17:32:47.100844",
+        "updated_at": "2024-03-12T17:32:47.100913",
+        "first_name": "",
+        "name": "My First Model",
+        "my_number": 89,
+        "__class__": "BaseModel"
     }
 }
