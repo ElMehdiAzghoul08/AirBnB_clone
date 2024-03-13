@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """UNITTEST FOR PLACE"""
 
 import unittest
