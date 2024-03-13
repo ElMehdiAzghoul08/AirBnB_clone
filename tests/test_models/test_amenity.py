@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """UNITTEST FOR AMENITY *"""
 
 import unittest

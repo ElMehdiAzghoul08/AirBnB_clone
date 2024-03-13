@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 """ UNITTEST file_storage.py """
 
 import unittest
