@@ -7,6 +7,5 @@ footer {
     position: absolute;
 }
 footer p {
-    margin: 0;
-    line-height: 60px;
+    line-height: 30px;
 }
